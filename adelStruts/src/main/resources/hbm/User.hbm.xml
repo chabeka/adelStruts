@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"classpath://org/hibernate/hibernate-mapping-3.0.dtd">
+<!-- Gestion manuelle -->
+<hibernate-mapping>
+    <class name="com.adel.model.User" table="user">
+        <id name="idUser" type="java.lang.Integer">
+            <column name="id_user" />
+            <generator class="increment" />
+        </id>
+        <property name="login" type="string">
+            <column name="login" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" />
+        </property>
+         <property name="lastConnexion" type="timestamp">
+            <column name="last_connexion" length="0" />
+        </property>
+        <property name="enable" type="boolean">
+            <column name="enable" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
