@@ -38,9 +38,9 @@
             <column name="id_user" />
         </many-to-one>
               
-        <one-to-one name="address" class="com.adel.model.Address" cascade="save-update">
-            
-        </one-to-one>
+        <many-to-one name="address" class="com.adel.model.Address" cascade="save-update">
+            <column name="id_address" />
+        </many-to-one>
                
     </class>
 </hibernate-mapping>
